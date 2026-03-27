@@ -1,7 +1,9 @@
 import { GitFork, Shield, Mail, FileText } from "lucide-react";
 
+const CURRENT_YEAR = new Date().getFullYear();
+
 export default function Footer() {
-  const year = new Date().getFullYear();
+  const year = CURRENT_YEAR;
 
   return (
     <footer className="bg-[#050505] border-t border-zinc-900 py-16 px-6">
