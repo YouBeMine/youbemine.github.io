@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ArrowDown, GitFork } from "lucide-react";
 
 export default function Hero() {
@@ -18,6 +19,19 @@ export default function Hero() {
       />
 
       <div className="relative z-10 max-w-4xl mx-auto">
+        {/* Organization logo */}
+        <div className="flex justify-center mb-8">
+          <div className="relative w-24 h-24 rounded-2xl overflow-hidden ring-2 ring-indigo-500/30 shadow-xl shadow-indigo-500/20">
+            <Image
+              src="/logo.png"
+              alt="YouBeMine logo"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+        </div>
+
         <div className="inline-flex items-center gap-2 bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full mb-8">
           <span className="w-2 h-2 bg-indigo-400 rounded-full animate-pulse" />
           Open Source · Zero Knowledge · End-to-End Encrypted

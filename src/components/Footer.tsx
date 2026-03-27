@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { GitFork, Shield, Mail, FileText } from "lucide-react";
 
 const CURRENT_YEAR = new Date().getFullYear();
@@ -12,8 +13,13 @@ export default function Footer() {
           {/* Brand */}
           <div className="text-center md:text-left">
             <div className="flex items-center gap-2 justify-center md:justify-start mb-3">
-              <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-indigo-600 to-teal-500 flex items-center justify-center">
-                <Shield className="w-4 h-4 text-white" />
+              <div className="relative w-7 h-7 rounded-lg overflow-hidden ring-1 ring-indigo-500/30 flex-shrink-0">
+                <Image
+                  src="/logo.png"
+                  alt="YouBeMine logo"
+                  fill
+                  className="object-cover"
+                />
               </div>
               <span className="text-white font-black text-xl tracking-tight">
                 YouBeMine
